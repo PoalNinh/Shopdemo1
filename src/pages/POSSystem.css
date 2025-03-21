@@ -1,0 +1,48 @@
+/* POSSystem.css */
+
+/* Disable pull-to-refresh and overscroll */
+html {
+    overscroll-behavior-y: none;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* For iOS devices - smoother scrolling */
+.smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text selection */
+* {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Allow text selection in inputs */
+input,
+textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+/* Active state for buttons */
+.tab-active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Line clamp for product names */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

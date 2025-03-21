@@ -1,0 +1,127 @@
+/* MobilePOS.css */
+
+/* Disable pull-to-refresh and overscroll */
+html {
+    overscroll-behavior-y: none;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* For iOS devices - smoother scrolling */
+.smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Active state for buttons */
+.tab-active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Product card optimization */
+.product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+}
+
+/* Add to cart animation */
+.add-to-cart-anim {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: rgba(0, 255, 0, 0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Input và select field trong header */
+.header-input {
+    color: #1f2937;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+.header-input::placeholder {
+    color: #9ca3af;
+}
+
+.header-select {
+    color: #1f2937;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+/* Tối ưu hiển thị cho mobile */
+@media (max-width: 640px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+}
+
+/* Cải thiện hiển thị offline banner */
+.offline-banner {
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    background-color: rgba(239, 68, 68, 0.9);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    z-index: 50;
+    font-size: 0.875rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation cho loading spinner */
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
